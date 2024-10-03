@@ -9,6 +9,7 @@ RUN apt-get install -y git libcurl4-openssl-dev curl libbz2-dev libzip-dev libxm
 RUN docker-php-ext-install pdo pdo_mysql curl bz2 zip intl mbstring bcmath gd pdo_pgsql mysqli
 
 RUN pecl install xdebug && docker-php-ext-enable xdebug
+RUN pecl install redis && docker-php-ext-enable redis
 
 RUN mkdir -p /usr/src/php/ext/imagick \
   && curl -fsSL https://github.com/Imagick/imagick/archive/944b67fce68bcb5835999a149f917670555b6fcb.tar.gz | tar xvz -C "/usr/src/php/ext/imagick" --strip 1 \

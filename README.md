@@ -1,5 +1,5 @@
 # Docker PHP development
-SImple docker container to assist with local php development. The container features NGINX, the latest PHP, Mariadb, PhpMyAdmin and of course NodeJS for NPM and Composer for php
+SImple docker container to assist with local php development. The container features NGINX, the latest PHP, Mariadb, Redis, PhpMyAdmin and of course NodeJS for NPM and Composer for php
 
 
 >❗NOTE
@@ -19,6 +19,9 @@ Happy developing!
 *note: See FAQ for composer, npm and database usage
 
 # FAQ
+
+## How do I use redis?
+First step is to uncomment the redis section in the `docker-compose.yml` file and you are ready to go! In your php you can use the host `redis` as a host connection parameter for the redis connection.
 
 ## How do I execute composer commands?
 Execute the following command: 

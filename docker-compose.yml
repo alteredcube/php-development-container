@@ -39,3 +39,8 @@ services:
       PMA_USER: 'development'
       PMA_PASSWORD: 'development'
       APACHE_PORT: 8080
+# redis:
+#   image: redis
+#   volumes:
+#     - ./app/redis/redis.conf:/usr/local/etc/redis/redis.conf
+#   command: redis-server /usr/local/etc/redis/redis.conf
