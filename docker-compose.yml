@@ -11,7 +11,7 @@ services:
   php:
     build:
       context: .
-      dockerfile: PHP.Dockerfile
+      dockerfile: ./conf/php/PHP.Dockerfile
     extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
