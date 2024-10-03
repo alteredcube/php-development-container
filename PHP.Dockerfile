@@ -6,7 +6,7 @@ RUN apt-get update && apt-get upgrade -y
 
 # Prepare the image with the required packages and extensions
 RUN apt-get install -y git libcurl4-openssl-dev curl libbz2-dev libzip-dev libxml2-dev libonig-dev libpng-dev python3.11-full libjpeg-dev libgd-dev libmagickwand-dev unzip 7zip libpq-dev
-RUN docker-php-ext-install pdo pdo_mysql curl bz2 zip intl mbstring bcmath gd pdo_pgsql
+RUN docker-php-ext-install pdo pdo_mysql curl bz2 zip intl mbstring bcmath gd pdo_pgsql mysqli
 
 RUN pecl install xdebug && docker-php-ext-enable xdebug
 
